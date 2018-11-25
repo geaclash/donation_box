@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>A Pen by  randygil97</title>
+
+
+
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+
+  <!-- CSS for component: -->
+  <link rel="stylesheet" href="css/intlTelInput.css">
+  <link rel="stylesheet" href="css/flexboxgrid.min.css">
+    <link href="css/tooltip.css" rel="stylesheet" type="text/css" />
+
+
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQ87M8"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="globalContent" id="globalContent">
+  <main>
+    <section class="container-lg">
+      <!--component 1-->
+      <div class="cell component donate">
+        <form id="donate-form">
+          <!-- Preventas -->
+
+          <div id="donate" class="screen screen_show ">
+
+            <div class="form_header">
+              <h2>Cada minuto que pasa la situación empeora <br>¡Ayuda ahora!</h2>
+              <p>Tu puedes ayudar a nuestros hermanos sirios que viven el sufrimiento interminable. Ayúdalos a través de sus sacerdotes y religiosas.</p>
+
+            </div>
+
+            <fieldset>
+              <h1>Tipo de aportación</h1>
+              <div class="amount_row">
+                <!-- buttons frequency -->
+                <div class="amount_frequency">
+                  <ul class="amount_frequency_list">
+
+                    <li class="amount_frequency_item">
+                      <input class="monthly" type="radio" name="frequency" value="month" id="donate-amount-frequency-monthly" checked>
+                      <label for="donate-amount-frequency-monthly">Mensual</label>
+                    </li>
+                    <li class="amount_frequency_item">
+                      <input class="once" type="radio" name="frequency" value="once" id="donate-amount-frequency-once">
+                      <label for="donate-amount-frequency-once">Puntual</label>
+                    </li>
+                  </ul>
+                </div>
+                <p class="qty_title">¿Qué cantidad?</p>
+
+                <ul class="amount_list">
+
+
+
+                  <li class="amount_item">
+                    <input class="amount_radio" type="radio" name="amount" value="10" id="donate-amount-1" data-amountid="1" checked>
+                    <label class="first" for="donate-amount-1">10 USD<br>
+
+                    </label>
+                    <div class="amount_check"></div>
+                  </li>
+
+                  <li class="amount_item">
+                    <input class="amount_radio" type="radio" name="amount" value="20" id="donate-amount-2" data-amountid="2">
+                    <label class="first" for="donate-amount-2">20 USD<br>
+
+                    </label>
+                    <div class="amount_check"></div>
+                  </li>
+                  <li class="amount_item">
+                    <input class="amount_radio" type="radio" name="amount" value="30" id="donate-amount-3" data-amountid="3">
+                    <label class="first" for="donate-amount-3">30 USD<br>
+
+                    </label>
+                    <div class="amount_check"></div>
+                  </li>
+                  <li class="amount_item">
+                    <input class="amount_radio" type="radio" name="amount" value="other"  id="donate-amount-other">
+                    <label class="last" for="donate-amount-other">Otro <br>
+
+                    </label>
+                    <div class="amount_check"></div>
+                  </li>
+
+
+                </ul>
+
+                <div class="preventas">
+
+                  <p class="preventa preventa_1">Prueba</p>
+                  <p class="preventa preventa_2"></p>
+                  <p class="preventa preventa_3"></p>
+
+                  <p class="preventa preventa_other">Coloca tu monto personalizado</p>
+                </div>
+                <div class="amount_other_panel">
+                  <label class="amount_other_input_label" id="donate-amount-label" for="donate-amount-custom">USD
+                    <input class="amount_other_input" type="tel" placeholder="Elegir un valor" id="donate-amount-custom" tabindex="-1"></label>
+                  <div id="error_explanation" class="error_custom_amount" role="alert"></div>
+                </div
+
+
+
+              </div>
+            </fieldset>
+
+
+            <div class="donate_action">
+
+              <button type="button" class=" next_button green_button" >Donar <span class="amount_button_val"></span> USD</button>
+            </div>
+
+
+
+
+
+
+            <input type="hidden" id="donate-locale" value="<%= db.locale %>">
+
+            <!-- Error -->
+            <div class="error" role="alert"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+              <path class="base" fill="#000" d="M8.5,17 C3.80557963,17 0,13.1944204 0,8.5 C0,3.80557963 3.80557963,0 8.5,0 C13.1944204,0 17,3.80557963 17,8.5 C17,13.1944204 13.1944204,17 8.5,17 Z"></path>
+              <path class="glyph" fill="#FFF" d="M8.5,7.29791847 L6.12604076,4.92395924 C5.79409512,4.59201359 5.25590488,4.59201359 4.92395924,4.92395924 C4.59201359,5.25590488 4.59201359,5.79409512 4.92395924,6.12604076 L7.29791847,8.5 L4.92395924,10.8739592 C4.59201359,11.2059049 4.59201359,11.7440951 4.92395924,12.0760408 C5.25590488,12.4079864 5.79409512,12.4079864 6.12604076,12.0760408 L8.5,9.70208153 L10.8739592,12.0760408 C11.2059049,12.4079864 11.7440951,12.4079864 12.0760408,12.0760408 C12.4079864,11.7440951 12.4079864,11.2059049 12.0760408,10.8739592 L9.70208153,8.5 L12.0760408,6.12604076 C12.4079864,5.79409512 12.4079864,5.25590488 12.0760408,4.92395924 C11.7440951,4.59201359 11.2059049,4.59201359 10.8739592,4.92395924 L8.5,7.29791847 L8.5,7.29791847 Z"></path>
+            </svg>
+              <span class="message"></span>
+            </div>
+          </div>
+          <div id="personal_info" class="screen screen_hidden">
+
+            <div class="form_header">
+              <div class="back">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="25px" height="19.5px" viewBox="0 0 25 19.5" style="enable-background:new 0 0 25 19.5;" xml:space="preserve"><defs></defs>
+                                        <path class="arrow_left" d="M7.8,0.7L0.6,8.1C0.2,8.5,0,9.1,0,9.7c0,0.6,0.2,1.2,0.6,1.6l7.1,7.5c0.8,0.9,2.2,0.9,3.1,0
+                                        c0.8-0.9,0.8-2.3,0-3.2L7.4,12h15.4C24,12,25,11,25,9.7s-1-2.3-2.2-2.3H7.4l3.4-3.6c0.8-0.9,0.8-2.3,0-3.2C10-0.2,8.6-0.2,7.8,0.7z"/>
+                                    </svg>
+              </div>
+              <h2 class="first_title">Mis datos personales</h2>
+            </div>
+            <fieldset>
+
+
+
+              <div class="row">
+                <input id="donate-name" data-tid="elements_components.form.name_placeholder" type="text" placeholder="Nombres*" autocomplete="on" required="">
+              </div>
+
+              <div class="row">
+
+                <input id="donate-lastname"  type="text" placeholder="Apellidos*" autocomplete="on" required="">
+              </div>
+              <div class="row">
+
+                <input id="donate-email"  type="email" placeholder="E-mail*" autocomplete="on" required="">
+              </div>
+              <div class="row">
+
+                <input id="donate-phone"  type="tel" autocomplete="on" required="" placeholder="Teléfono*">
+                <div class="tel_validate">
+                  <span id="valid-msg" class="hide">✅</span>
+                  <span id="error-msg" class="hide">❌</span>
+                </div>
+              </div>
+              <div class="row">
+
+                <select id="donate-countries" placeholder="País*" data-tid="elements_components.form.countries_placeholder" required="">
+                  <option value="">País*</option>
+                </select>
+              </div>
+
+              <div class="row checkbox">
+                <input type="checkbox" id="desgravar_checkbox" name="desgravar" value="1" data-tid="elements_components.form.desgravar"  required="">
+                <label for="desgravar">
+                  Quiero desgravar mi aportación en la declaración de renta. <a href="javascript:void(0)" onclick="tooltip.pop(this, '#tooltip-politica', {sticky:true, position:0, cssClass:'no-padding'})">Más información</a>.
+              
+
+                </label>
+                 <div style="display:none;">
+        
+                    <div id="tooltip-politica">
+                        <img src="src/tooltip-head.jpg" />
+                        <div style="padding:20px;">
+                            
+                            <div style="height:200px; overflow: scroll">
+                                <h1>Easy to Config</h1>
+                                <p>The tooltip can display with different display modes and styles by configuring the options in the <em>tooltip.js</em>, or passing the options to the tooltip.pop() call if you only need the options apply to an individual element.</p>
+                                 <p>The tooltip can display with different display modes and styles by configuring the options in the <em>tooltip.js</em>, or passing the options to the tooltip.pop() call if you only need the options apply to an individual element.</p>
+                                  <p>The tooltip can display with different display modes and styles by configuring the options in the <em>tooltip.js</em>, or passing the options to the tooltip.pop() call if you only need the options apply to an individual element.</p>
+                                   <p>The tooltip can display with different display modes and styles by configuring the options in the <em>tooltip.js</em>, or passing the options to the tooltip.pop() call if you only need the options apply to an individual element.</p>
+                                     <p>The tooltip can display with different display modes and styles by configuring the options in the <em>tooltip.js</em>, or passing the options to the tooltip.pop() call if you only need the options apply to an individual element.</p>
+                                 <p>The tooltip can display with different display modes and styles by configuring the options in the <em>tooltip.js</em>, or passing the options to the tooltip.pop() call if you only need the options apply to an individual element.</p>
+                                  <p>The tooltip can display with different display modes and styles by configuring the options in the <em>tooltip.js</em>, or passing the options to the tooltip.pop() call if you only need the options apply to an individual element.</p>
+                                   <p>The tooltip can display with different display modes and styles by configuring the options in the <em>tooltip.js</em>, or passing the options to the tooltip.pop() call if you only need the options apply to an individual element.</p>
+                                     <p>The tooltip can display with different display modes and styles by configuring the options in the <em>tooltip.js</em>, or passing the options to the tooltip.pop() call if you only need the options apply to an individual element.</p>
+                                 <p>The tooltip can display with different display modes and styles by configuring the options in the <em>tooltip.js</em>, or passing the options to the tooltip.pop() call if you only need the options apply to an individual element.</p>
+                                  <p>The tooltip can display with different display modes and styles by configuring the options in the <em>tooltip.js</em>, or passing the options to the tooltip.pop() call if you only need the options apply to an individual element.</p>
+                                   <p>The tooltip can display with different display modes and styles by configuring the options in the <em>tooltip.js</em>, or passing the options to the tooltip.pop() call if you only need the options apply to an individual element.</p>
+                               </div>
+                        </div>
+                    </div>
+                </div>
+
+              </div>
+            </fieldset>
+            <div class="donate_action">
+              <button type="button" class=" next_button green_button" >Siguiente</button>
+
+             
+            </div>
+
+          </div>
+
+        <div id="payment_method" class="screen screen_hidden">
+
+            <div id="payment" class="form_header">
+
+                <div class="back">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="25px" height="19.5px" viewBox="0 0 25 19.5" style="enable-background:new 0 0 25 19.5;" xml:space="preserve"><defs></defs>
+                                        <path class="arrow_left" d="M7.8,0.7L0.6,8.1C0.2,8.5,0,9.1,0,9.7c0,0.6,0.2,1.2,0.6,1.6l7.1,7.5c0.8,0.9,2.2,0.9,3.1,0
+                                        c0.8-0.9,0.8-2.3,0-3.2L7.4,12h15.4C24,12,25,11,25,9.7s-1-2.3-2.2-2.3H7.4l3.4-3.6c0.8-0.9,0.8-2.3,0-3.2C10-0.2,8.6-0.2,7.8,0.7z"/>
+                                    </svg>
+               </div>
+              <h1>Forma de pago</h1>
+              <div id="payment_type_select" class="radio" style="display: flex; align-content: center;align-items: center; justify-content: center">
+                <div class="input-group">
+                  <label for="domicilacion" class="btn-radio">
+                    <input type="radio" id="domicilacion" name="payment_type" value="domiciliacion" checked>
+                    <svg width="20px" height="20px" viewBox="0 0 20 20">
+                      <circle cx="10" cy="10" r="9"></circle>
+                      <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z" class="inner"></path>
+                      <path d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z" class="outer"></path>
+                    </svg>
+                    <span>Domiciliacion</span>
+                  </label>
+                </div>
+                <div class="input-group">
+                  <div class="radio" style="display: flex; align-content: center;align-items: center; justify-content: center">
+
+                    <label for="tarjeta" class="btn-radio">
+                      <input type="radio" id="tarjeta" name="payment_type" value="tarjeta">
+                      <svg width="20px" height="20px" viewBox="0 0 20 20">
+                        <circle cx="10" cy="10" r="9"></circle>
+                        <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z" class="inner"></path>
+                        <path d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z" class="outer"></path>
+                      </svg>
+                      <span>Tarjeta</span>
+                    </label>
+                  </div>
+                </div>
+
+              </div>
+
+              <fieldset id="payment_domiciliacion" style="display:none">
+                <div class="row">
+
+                  <div class="col-xs-11">
+                    <input type="text" id="domiciliacion_titular" name="domiciliacion_titular" placeholder="Titular*" >
+                  </div>
+                </div>
+                <div class="row">
+
+                  <div class="col-xs-5">
+                    <input id="domiciliacion_ivan" name="domiciliacion_ivan" type="text" placeholder="IVAN*" autocomplete="on" required="">
+                  </div>
+                  <div class="col-xs-1">
+
+                  </div>
+                  <div class="col-xs-5">
+
+                    <input id="domiciliacion_entidad" name="domiciliacion_entidad" type="text" placeholder="Entidad*" autocomplete="on" required="">
+                  </div>
+
+
+                </div>
+                <div class="row">
+
+                  <div class="col-xs-5">
+                    <input id="domiciliacion_oficina" name="domiciliacion_oficina" type="text" placeholder="Oficina*" autocomplete="on" required="">
+                  </div>
+                  <div class="col-xs-1">
+
+                  </div>
+                  <div class="col-xs-5">
+
+                    <input id="domiciliacion_dc" name="domiciliacion_dc" type="text" placeholder="DC*" autocomplete="on" required="">
+                  </div>
+
+
+                </div>
+
+                <div class="row">
+
+                  <div class="col-xs-11">
+                    <input id="domiciliacion_cuenta" name="domiciliacion_cuenta"   type="text" placeholder="Cuenta*" autocomplete="on">
+                  </div>
+
+
+                </div>
+                <div class="row checkbox">
+                  <input type="checkbox" id="consentimiento" name="consentimiento" value="1" data-tid="elements_components.form.countries_politic"  required="">
+                  <label for="consentimiento">
+                    Otorgo consentimiento expreso, inequívoco, e informado para el tratamiento de mis datos personales
+                    de conformidad con la finalidades detalladas,en la <a href="">Politica de Privacidad</a>
+                    con la que estoy conforme
+                  </label>
+                </div>
+
+                <div class="donate_action">
+                    <button type="button" class=" next_button green_button" >Donar <span class="amount_button_val"></span> USD</button>
+
+                </div>
+
+              </fieldset>
+
+              <fieldset id="payment_stripe">
+                <p style="text-align: left; font-size: 16px;">Usar los mismos datos</p>
+                <div class="row">
+
+                  <div class="col-xs-11">
+                    <input type="text" id="tarjeta_titular" name="domiciliacion_titular" placeholder="Titular*" >
+                  </div>
+                </div>
+
+                <div class="row">
+
+                  <div class="col-xs-11">
+                    <div id="card-number-element" class="field"></div>
+                  </div>
+               
+                </div>
+
+
+                <div class="row">
+                    <div class="col-xs-5">
+                        <div id="card-expiry-element" class="field"></div>
+                    </div>
+                    <div class="col-xs-1">
+                         
+                    </div>
+                    <div class="col-xs-5">
+                        <div id="card-cvc-element" class="field"></div>
+                    </div>
+                  
+                </div>
+
+                <div class="donate_action">
+                    <button type="button" class=" next_button green_button" >Donar <span class="amount_button_val"></span> USD</button>
+                </div>
+
+              <div class="error" role="alert"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                  <path class="base" fill="#000" d="M8.5,17 C3.80557963,17 0,13.1944204 0,8.5 C0,3.80557963 3.80557963,0 8.5,0 C13.1944204,0 17,3.80557963 17,8.5 C17,13.1944204 13.1944204,17 8.5,17 Z"></path>
+                  <path class="glyph" fill="#FFF" d="M8.5,7.29791847 L6.12604076,4.92395924 C5.79409512,4.59201359 5.25590488,4.59201359 4.92395924,4.92395924 C4.59201359,5.25590488 4.59201359,5.79409512 4.92395924,6.12604076 L7.29791847,8.5 L4.92395924,10.8739592 C4.59201359,11.2059049 4.59201359,11.7440951 4.92395924,12.0760408 C5.25590488,12.4079864 5.79409512,12.4079864 6.12604076,12.0760408 L8.5,9.70208153 L10.8739592,12.0760408 C11.2059049,12.4079864 11.7440951,12.4079864 12.0760408,12.0760408 C12.4079864,11.7440951 12.4079864,11.2059049 12.0760408,10.8739592 L9.70208153,8.5 L12.0760408,6.12604076 C12.4079864,5.79409512 12.4079864,5.25590488 12.0760408,4.92395924 C11.7440951,4.59201359 11.2059049,4.59201359 10.8739592,4.92395924 L8.5,7.29791847 L8.5,7.29791847 Z"></path>
+                </svg>
+                  <span class="message"></span>
+                </div>
+     
+              </fieldset>
+
+
+
+
+
+
+
+
+
+
+
+              <input type="hidden" id="donate-locale" value="<%= db.locale %>">
+
+              <!-- Error -->
+
+            </div>
+        </div>
+
+        <div id="desgravacion" class="screen screen_hidden">
+            <div class="back">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="25px" height="19.5px" viewBox="0 0 25 19.5" style="enable-background:new 0 0 25 19.5;" xml:space="preserve"><defs></defs>
+                                    <path class="arrow_left" d="M7.8,0.7L0.6,8.1C0.2,8.5,0,9.1,0,9.7c0,0.6,0.2,1.2,0.6,1.6l7.1,7.5c0.8,0.9,2.2,0.9,3.1,0
+                                    c0.8-0.9,0.8-2.3,0-3.2L7.4,12h15.4C24,12,25,11,25,9.7s-1-2.3-2.2-2.3H7.4l3.4-3.6c0.8-0.9,0.8-2.3,0-3.2C10-0.2,8.6-0.2,7.8,0.7z"/>
+                                </svg>
+           </div>
+          <div class="form_header">
+            <h1>Datos para la desgravación fiscal</h1>
+            <p>Por favor @Name, completa los siguientes datos para recibir el certificado de desgravación
+              fiscal. Recuerda que tus donativos desgravan hasta un 75%.</p>
+
+          </div>
+
+          <fieldset>
+            <div class="row">
+
+              <div class="col-xs-3">
+                <input type="text" name="desgravacion_nif" placeholder="Nif*" required>
+              </div>
+              <div class="col-xs-1">
+
+              </div>
+              <div class="col-xs-8">
+                <input type="text" name="desgravacion_nif" placeholder="Tipo de VÍA*" required>
+              </div>
+
+
+            </div>
+            <div class="row">
+
+              <div class="col-xs-8">
+                <input id="desgravacion_address" name="desgravacion_address" type="text" placeholder="Dirección" autocomplete="on">
+              </div>
+              <div class="col-xs-1">
+
+              </div>
+              <div class="col-xs-3">
+
+                <input id="desgravacion_number" name="desgravacion_number" type="text" placeholder="Número*" autocomplete="on" required="">
+              </div>
+
+
+            </div>
+            <div class="row">
+
+              <div class="col-xs-2">
+                <input id="desgravacion_piso" name="desgravacion_piso"   type="text" placeholder="Piso" autocomplete="on">
+              </div>
+              <div class="col-xs-1">
+
+              </div>
+              <div class="col-xs-3">
+                <input id="desgravacion_escalera" name="desgravacion_escalera"  type="text" placeholder="Escalera" autocomplete="on" required="">
+              </div>
+              <div class="col-xs-1">
+
+              </div>
+              <div class="col-xs-2">
+                <input id="desgravacion_letra" name="desgravacion_letra"  type="text" placeholder="Letra" autocomplete="on" >
+              </div>
+              <div class="col-xs-1">
+
+              </div>
+              <div class="col-xs-2">
+                <input id="desgravacion_cp" name="desgravacion_cp"  type="text" placeholder="CP*" autocomplete="on" required="">
+              </div>
+
+            </div>
+            <div class="row">
+
+              <div class="col-xs-12">
+                <input id="desgravacion_resto_via" name="desgravacion_resto_via"   type="text" placeholder="Resto de vía" autocomplete="on">
+              </div>
+
+
+            </div>
+            <div class="row">
+
+              <div class="col-xs-6">
+                <input id="desgravacion_provincia" name="desgravacion_provincia"   type="text" placeholder="Provincia*" autocomplete="on" required>
+              </div>
+              <div class="col-xs-1">
+
+              </div>
+              <div class="col-xs-5">
+                <input id="desgravacion_provincia" name="desgravacion_poblacion"   type="text" placeholder="Población*" autocomplete="on" required>
+              </div>
+
+            </div>
+
+            <div class="donate_action">
+              <button type="button" class="next_button" type="button" >Siguiente</button>
+            </div>
+
+          </fieldset>
+
+
+
+
+
+
+
+
+
+
+
+          <input type="hidden" id="donate-locale" value="<%= db.locale %>">
+
+          <!-- Error -->
+
+        </div>
+
+      <div class="error" role="alert"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+          <path class="base" fill="#000" d="M8.5,17 C3.80557963,17 0,13.1944204 0,8.5 C0,3.80557963 3.80557963,0 8.5,0 C13.1944204,0 17,3.80557963 17,8.5 C17,13.1944204 13.1944204,17 8.5,17 Z"></path>
+          <path class="glyph" fill="#FFF" d="M8.5,7.29791847 L6.12604076,4.92395924 C5.79409512,4.59201359 5.25590488,4.59201359 4.92395924,4.92395924 C4.59201359,5.25590488 4.59201359,5.79409512 4.92395924,6.12604076 L7.29791847,8.5 L4.92395924,10.8739592 C4.59201359,11.2059049 4.59201359,11.7440951 4.92395924,12.0760408 C5.25590488,12.4079864 5.79409512,12.4079864 6.12604076,12.0760408 L8.5,9.70208153 L10.8739592,12.0760408 C11.2059049,12.4079864 11.7440951,12.4079864 12.0760408,12.0760408 C12.4079864,11.7440951 12.4079864,11.2059049 12.0760408,10.8739592 L9.70208153,8.5 L12.0760408,6.12604076 C12.4079864,5.79409512 12.4079864,5.25590488 12.0760408,4.92395924 C11.7440951,4.59201359 11.2059049,4.59201359 10.8739592,4.92395924 L8.5,7.29791847 L8.5,7.29791847 Z"></path>
+        </svg>
+          <span class="message"></span>
+        </div>
+        </form>
+    
+        <!-- Success -->
+
+        <div class="success">
+          <div class="icon">
+            <svg width="84px" height="84px" viewBox="0 0 84 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <circle class="border" cx="42" cy="42" r="40" stroke-linecap="round" stroke-width="4" stroke="#000" fill="none"></circle>
+              <path class="checkmark" stroke-linecap="round" stroke-linejoin="round" d="M43.6,42l14.8-14.8c0.4-0.4,0.4-1,0-1.4c-0.4-0.4-1-0.4-1.4,0L42.1,40.6L27,25.5c-0.4-0.4-1-0.4-1.4,0
+        c-0.4,0.4-0.4,1,0,1.4L40.7,42L25.6,57.1c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3c0.3,0,0.5-0.1,0.7-0.3l15.1-15.1l14.8,14.8
+        c0.2,0.2,0.5,0.3,0.7,0.3c0.3,0,0.5-0.1,0.7-0.3c0.4-0.4,0.4-1,0-1.4L43.6,42z" stroke-width="4" stroke="#000" fill="none"></path>
+            </svg>
+            <!-- <svg width="84px" height="84px" viewBox="0 0 84 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<circle class="border" cx="42" cy="42" r="40" stroke-linecap="round" stroke-width="4" stroke="#000" fill="none"></circle>
+<path class="checkmark" stroke-linecap="round" stroke-linejoin="round" d="M23.375 42.5488281 36.8840688 56.0578969 64.891932 28.0500338" stroke-width="4" stroke="#000" fill="none"></path>
+</svg> -->
+          </div>
+          <h3 class="title" data-tid="elements_components.success.title">Ocurrió un error!</h3>
+          <p class="message">
+            <span data-tid="elements_components.success.message" class="token"></span></p>
+          <h3 class="title" data-tid="elements_components.success.title">Intentar nuevamente</h3>
+          <a class="error_back" href="#">Regresar</a>
+        </div>
+      </form>
+      </div>
+
+
+    </section>
+  </main>
+</div>
+<script src="js/tooltip.js" type="text/javascript"></script>
+<script src="js/jquery.min.js"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="js/intlTelInput.min.js"></script>
+
+<!-- Scripts for each component: -->
+<script src="js/donate2.js"></script>
+
+
+
+</body>
+
+</html>
+
+
+
+</body>
+
+</html>
